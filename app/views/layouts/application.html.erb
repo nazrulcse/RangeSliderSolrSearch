@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SolrSearch</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class='page-wrapper'>
+  <nav class='navbar navbar-default'>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <%= link_to(raw("<img alt='Brand' src='...'>"), root_path) %>
+      </div>
+    </div>
+  </nav>
+  <%= yield %>
+</div>
+<script type='text/javascript'>
+    Turbolinks.enableProgressBar();
+</script>
+</body>
+</html>

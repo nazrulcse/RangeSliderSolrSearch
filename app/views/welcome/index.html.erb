@@ -1,0 +1,23 @@
+<div class='span12 clearfix'>
+  Range:
+  <input type="text" id="custom-range"/>
+  Education:
+  <input type="text" id="education-range"/>
+
+  <div class="panel panel-default">
+    <div class="panel-heading"> Member Panel</div>
+    <div class="panel-body">
+      <ul class="nav nav-pills">
+        <li role="presentation">
+          <%= link_to('Add Member', new_member_path()) %>
+        </li>
+        <li role="presentation">
+          <%= link_to("All Members", members_path()) %>
+        </li>
+        <li class="disabled" role="presentation">
+          <a href="#">Disabled link</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

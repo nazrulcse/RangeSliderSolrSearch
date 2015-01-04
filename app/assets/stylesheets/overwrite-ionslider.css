@@ -1,0 +1,76 @@
+.irs-bar {
+    background: #ccc;
+    height: 12px;
+}
+
+.irs-line {
+    background: none repeat scroll 0 0 #dfdfdf;
+    height: 12px;
+}
+
+.irs-min, .irs-max {
+    visibility: hidden !important;
+}
+
+.custom-grid {
+    background: red;
+    width: 100%;
+    height: 10px;
+}
+
+.irs-slider {
+    height: 25px;
+    top: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.irs-slider:after {
+    border-color: transparent transparent #b4cdcd;
+    border-style: solid;
+    border-width: 13px;
+    content: "";
+    position: absolute;
+}
+
+.irs-single, .irs-from, .irs-to, .irs-single {
+    bottom: -20px !important;
+    top: auto !important;
+    background: none;
+    color: #333333;
+}
+
+.irs-single:after, .irs-from:after, .irs-to:after, .irs-single:after {
+  border: none !important;
+}
+
+/* Design Grid */
+.irs-grid {
+    top: 0;
+    bottom: auto !important;
+}
+
+.irs-grid-pol.small {
+   visibility: hidden;
+}
+
+.irs-grid-pol {
+    bottom: 9px;
+    top: auto;
+    height: 10px;
+}
+
+.irs-grid-text {
+    bottom: auto;
+    color: #c0c0c0;
+    top: 0;
+}
+
+.irs-with-grid {
+    height: 75px;
+    margin-top: 10px;
+}
+
+
+
+
