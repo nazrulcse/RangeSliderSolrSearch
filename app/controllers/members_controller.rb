@@ -4,10 +4,12 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   def index
-    @matches = Member.search do
-      with(:height).between(1..100)
-    end
-    @members = Member.all
+     search = Member.search do
+      with(:id).any_of([1, 2,3, 4, 5, 6])
+      #with(:height).any_of([58, 85, 56, 65])
+     end
+     @matches = search.results
+     @members = Member.all
   end
 
   # GET /members/1
