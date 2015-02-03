@@ -26,17 +26,41 @@
       </ul>
     </div>
   </div>
+  <div id='pdf'>
+    <div class='pdf-wrapper clearfix'>
+      <div class='avatar clearfix'>
+        <img src="<%= Rails.root.join('app', 'assets', 'images', 'ui-icons_222222_256x240.png') %>" width='250' />
+      </div>
+      <div class='clear'></div>
+      What’s great about this solution is how well it lends itself to testing.
+      By using the pdf-reader gem, we can convert the renderred PDF into a string and assert that the proper content is
+      included.
+      <span class='last-section'> So a couple example tests (using Rspec) might look something like this: </span>
+      <span class="glyphicon glyphicon-remove remove-item"></span>
+      <form action='/'>
+        <ul>
+          <li>
+            <span> Name: </span> <input type="text" class='input'/>
+          </li>
+          <li>
+            <span> Roll: </span> <input type="text" class='input'>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+  <a href="javascript:void(0);" id="generate-pdf" class='btn btn-default'> Generate </a>
 </div>
 <script type='text/javascript'>
-    $(function() {
-        $( "#date" ).datepicker();
-        $( "#bdate" ).bdatepicker();
+    $(function () {
+        $("#date").datepicker();
+        $("#bdate").bdatepicker();
 
-        $( "#bdateMonth" ).bdatepicker({
+        $("#bdateMonth").bdatepicker({
             changeMonth: true
         });
 
-        $( "#bdateMonthYear" ).bdatepicker({
+        $("#bdateMonthYear").bdatepicker({
             changeYear: true,
             changeMonth: true,
             startYear: 1988
@@ -64,4 +88,23 @@
         dayNamesShort: ["রবি ", "সোম ", "মঙ্গল ", "বূধ ", "বৃহ ", "শুক্র ", "শনি "],
         dayNamesMin: ["রবি ", "সোম ", "মঙ্গল ", "বূধ ", "বৃহ ", "শুক্র ", "শনি "]
     });
+
+    $("#generate-pdf").click(function () {
+        $.ajax({
+            url: "<%= generate_pdf_path() %>",
+            type: 'get',
+            data: {html: $('#pdf').html()},
+            success: function () {
+                alert("Success :)");
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        })
+    });
+
+        $(".remove-item").click(function() {
+           $('.last-section').remove();
+        });
+
 </script>

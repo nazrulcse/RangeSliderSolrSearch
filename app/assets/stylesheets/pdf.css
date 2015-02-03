@@ -1,0 +1,36 @@
+.pdf-wrapper {
+    padding: 4px;
+    background: #cccccc;
+    color: #333333;
+    border: solid 1px #dfdfdf;
+}
+
+#pdf .input {
+    width: 350px;
+    padding: 4px;
+    border: solid 1px #dfdfdf;
+    color: red;
+}
+
+#pdf ul li {
+    padding: 5px;
+}
+
+#pdf ul li span {
+    color: #245269;
+    font-weight: bold;
+    width: 120px;
+    display: inline-block;
+}
+
+.avatar {
+    padding: 4px;
+    border: solid 2px #dfdfdf;
+    background: #fdfdfd;
+    width: 265px;
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
